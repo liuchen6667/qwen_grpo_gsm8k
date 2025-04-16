@@ -10,10 +10,11 @@ conda create -n grpo python==3.12
 conda activate grpo
 pip install -r requirements.txt
 ```
-# 模型
+# 模型和数据
 - deepseek-r1-distill-qwen-1.5b：https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
 - qwen2.5-1.5b：https://huggingface.co/Qwen/Qwen2.5-1.5B
 - 可以根据自己的需要以及硬件环境替换成别的模型
+- 数据集为gsm8k，已经附带在项目里，下载链接：https://huggingface.co/datasets/openai/gsm8k
 
 # 测试集上评估
 ```bash
