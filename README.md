@@ -32,12 +32,12 @@ python main.py --task=grpo_train --model_name_or_path=Qwen/Qwen2.5-1.5B-r1-disti
 ```
 
 # 训练后模型评分（zero-shot）
-| 模型                         | 分数 |
-|-----------------------------|------|
-| qwen2.5-1.5b-r1-distil-grpo | 79   |
-| qwen2.5-1.5b-r1-distil      | 73   |
-| qwen2.5-1.5b-sft-grpo       | 55   |
-| qwen2.5-1.5b-sft            | 46   |
+| 模型                         | 方法                             | 分数 |
+|-----------------------------|----------------------------------|------|
+| qwen2.5-1.5b-r1-distil-grpo | 使用蒸馏版模型grpo               | 79   |
+| qwen2.5-1.5b-r1-distil      | 直接评估蒸馏版模型               | 73   |
+| qwen2.5-1.5b-sft-grpo       | 使用原版模型sft后grpo           | 55   |
+| qwen2.5-1.5b-sft            | 使用原版模型sft                  | 46   |
 
 # 作者
 小红书@百面大模型-持续更新
