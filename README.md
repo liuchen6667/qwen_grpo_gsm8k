@@ -2,6 +2,7 @@
 - 本项目用于快速上手理解一个简单的grpo任务，抛弃繁杂的代码，支持在测试集上评估，以及sft和grpo
 - 实时监控各项指标使用swanlab，需要稍微注册一下
 - 运行显存方面，通过调整batchsize，可以用20g以下显存优化0.5b模型，作者在96g显存上优化1.5b模型，3b问题也不大
+- grpo速度瓶颈在于推理速度，建议开启vllm，速度变为五倍。跑一次grpo需要6小时左右
 
 # 环境搭建
 ```bash
@@ -9,6 +10,11 @@ conda create -n grpo python==3.12
 conda activate grpo
 pip install -r requirements.txt
 ```
+# 模型
+- deepseek-r1-distill-qwen-1.5b：https://huggingface.co/deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B
+- qwen2.5-1.5b：https://huggingface.co/Qwen/Qwen2.5-1.5B
+- 可以根据自己的需要以及硬件环境替换成别的模型
+
 # 测试集上评估
 ```bash
 python main.py --task=infer_vllm --checkpoint_dir=Qwen/Qwen2.5-1.5B-r1-distil
