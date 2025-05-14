@@ -40,7 +40,7 @@ python main.py --task=grpo_train --model_name_or_path=Qwen/Qwen2.5-1.5B-r1-disti
 | qwen2.5-1.5b-sft            | 使用原版模型sft                  | 46   |
 
 # 作者
-小红书@百面大模型-持续更新
+小红书@小刘の算法笔记
 
 # 参考项目
 https://github.com/QunBB/DeepLearning/tree/main/llms/train/deepseek-train
